@@ -13,8 +13,7 @@ public class SwitchScript : MonoBehaviour
 
     void Update()
     {
-        // Нажатие на клавишу V переключает режим камеры
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isFpv = !isFpv;
         }

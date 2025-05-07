@@ -62,7 +62,11 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/SwitchScript.cs" />
     <Compile Include="Assets/Scripts/PlayerScript.cs" />
+    <Compile Include="Assets/Scripts/GameEvents.cs" />
+    <Compile Include="Assets/Scripts/Key1Script.cs" />
+    <Compile Include="Assets/Scripts/Lights.cs" />
     <Compile Include="Assets/Scripts/CameraScript.cs" />
+    <Compile Include="Assets/Scripts/Gates1Script.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
