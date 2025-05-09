@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GameEvents
 {
-    private static List<Action<string>> subscribers = new List<Action<string>>();
+    private static List<Action<GameEvent>> subscribers = new List<Action<GameEvent>>();
 
     // Метод для подписки на событие
-    public static void Subscribe(Action<string> action)
+    public static void Subscribe(Action<GameEvent> action)
     {
         if (action != null && !subscribers.Contains(action))
         {
@@ -15,7 +15,7 @@ public class GameEvents
         }
     }
 
-    public static void UnSubscribe(Action<string> action)
+    public static void UnSubscribe(Action<GameEvent> action)
     {
         if (action != null && !subscribers.Contains(action))
         {
@@ -24,7 +24,7 @@ public class GameEvents
     }
 
     // Метод для вызова события
-    public static void EmitEvent(string e)
+    public static void EmitEvent(GameEvent e)
     {
         foreach (var action in subscribers)
         {

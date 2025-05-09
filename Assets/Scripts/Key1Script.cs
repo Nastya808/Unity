@@ -20,7 +20,7 @@ public class Key1Script : MonoBehaviour
     {
         if(other.name == "Player")
         {
-            GameEvents.EmitEvent("Key 1 Collected");
+            GameEvents.EmitEvent(new GameEvent { name = "Key1", toast = "Key 1 Collected. Gates 1 opening" });
             GameObject.Destroy(this.gameObject);
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GatesScript : MonoBehaviour
 {
-    private bool isOpen = false;
+    public static bool isOpen = false;
     private GameObject content;
 
     private float openingTime = 5.0f; // Час повного відкриття
@@ -37,9 +37,10 @@ public class GatesScript : MonoBehaviour
         }
     }
 
-    private void OnGameEvent(string e)
+
+    private void OnGameEvent(GameEvent e)
     {
-        if (e == "Key 1 Collected")
+        if (e.name == "Key1")
         {
             isOpen = true;
         }
